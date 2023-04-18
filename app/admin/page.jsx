@@ -48,9 +48,8 @@ export default function AdminDashboard() {
           requests={requests}
         />
       </div>
-
-      {/* 
       <TrafficChart />
+      {/* 
       <UsageMap />
       <AssetsCard />
       <PendingCard />
