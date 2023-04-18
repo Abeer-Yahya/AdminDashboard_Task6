@@ -13,7 +13,7 @@ function TrafficChart() {
       data: {
         labels: [
           "Jan 2022",
-          "Feb 2022",
+          "Jan 2022",
           "Mar 2022",
           "Apr 2022",
           "May 2022",
@@ -21,51 +21,70 @@ function TrafficChart() {
           "Jul 2022",
           "Aug 2022",
           "Sep 2022",
-          "Oct 2022 ",
+          "Oct 2022",
           "Nov 2022",
           "Dec 2022",
         ],
         datasets: [
           {
             data: [
-              20, 0, 40, 20, 80, 40, 80, 40, 20, 0, 40, 20, 80, 40, 80, 40,
+              20000, 32000, 52000, 43000, 73000, 43000, 23000, 52000, 43000,
+              90000, 50000, 63000,
             ],
-            label: "Applied",
-            borderColor: "#56B0CB",
-            backgroundColor: "#7bb6dd",
+            label: "Rejected",
+            borderColor: "#009AAC",
+            backgroundColor: "#009AAC",
             fill: false,
-            pointStyle: "cross",
           },
         ],
       },
       options: {
-        responsive: true,
-        maintainAspectRatio: true,
+        legend: {
+          display: false, //This will do the task
+        },
         scales: {
-          xAxes: [
-            {
-              gridLines: {
-                // borderDash: "1",
-              },
-            },
-          ],
           yAxes: [
             {
               gridLines: {
                 display: false,
               },
+              ticks: {
+                min: 0,
+                max: 100000,
+                callback: function (value, index, ticks) {
+                  if (value === 0) {
+                    return "0";
+                  }
+                  if (value === 20000) {
+                    return "20K";
+                  }
+                  if (value === 40000) {
+                    return "40K";
+                  }
+                  if (value === 60000) {
+                    return "60K";
+                  }
+                  if (value === 80000) {
+                    return "80K";
+                  }
+                  if (value === 100000) {
+                    return "100K";
+                  }
+                },
+                fontColor: "#3c3c3c70",
+              },
             },
           ],
-        },
-        legend: {
-          display: false,
-        },
-        tooltips: {
-          callbacks: {
-            label: function (tooltipItem) {
-              return tooltipItem.yLabel;
+          xAxes: [
+            {
+              gridLines: {
+                borderDash: [5, 5],
+              },
+              ticks: {
+                fontColor: "#3c3c3c70",
+              },
             },
-          },
+          ],
         },
       },
     });
@@ -76,7 +95,7 @@ function TrafficChart() {
       <div className={styles.card}>
         <h2>Portal Traffic (Per Month)</h2>
         <div>
-          <canvas id="myChart"></canvas>
+          <canvas height={50} id="myChart"></canvas>
         </div>
       </div>
     </>
