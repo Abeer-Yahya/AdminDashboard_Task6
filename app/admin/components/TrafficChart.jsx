@@ -31,7 +31,7 @@ function TrafficChart() {
               20000, 32000, 52000, 43000, 73000, 43000, 23000, 52000, 43000,
               90000, 50000, 63000,
             ],
-            label: "Rejected",
+            // label: "Rejected",
             borderColor: "#009AAC",
             backgroundColor: "#009AAC",
             fill: false,
@@ -40,7 +40,7 @@ function TrafficChart() {
       },
       options: {
         legend: {
-          display: false, //This will do the task
+          display: false,
         },
         scales: {
           yAxes: [
@@ -91,7 +91,6 @@ function TrafficChart() {
   }, []);
   return (
     <>
-      {/* line chart */}
       <div className={styles.card}>
         <h2>Portal Traffic (Per Month)</h2>
         <div>

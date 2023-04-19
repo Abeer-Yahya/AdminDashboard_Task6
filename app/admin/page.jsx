@@ -30,6 +30,9 @@ export default function AdminDashboard() {
   const notificationsOverdue = 23;
   const requests = 21;
 
+  //Assets Card
+  const totalAssets = 13458;
+  const uploadedAssets = 2870;
   return (
     <main className={styles.adminDashboard}>
       <AdminDetails name={name} role={role} assets={newAssets} date={date} />
@@ -49,9 +52,9 @@ export default function AdminDashboard() {
         />
       </div>
       <TrafficChart />
+      <AssetsCard totalAssets={totalAssets} uploadedAssets={uploadedAssets} />
       {/* 
       <UsageMap />
-      <AssetsCard />
       <PendingCard />
       <MostSearched />
       <MostDownloaded /> */}
