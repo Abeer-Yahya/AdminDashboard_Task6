@@ -35,14 +35,14 @@ function BarChart() {
                 min: 0,
                 max: 400,
                 callback: function (value, index, ticks) {
-                  if (value === 400) {
-                    return "400";
+                  if (value === 0) {
+                    return "0";
                   }
                   if (value === 200) {
                     return "200";
                   }
-                  if (value === 0) {
-                    return "0";
+                  if (value === 400) {
+                    return "400";
                   }
                 },
                 fontColor: "#3c3c3c70",

@@ -30,6 +30,10 @@ export default function AdminDashboard() {
   const notificationsOverdue = 23;
   const requests = 21;
 
+  //Map card
+  const worldwide = "2%";
+  const domestic = "8%";
+
   //Assets Card
   const totalAssets = 13458;
   const uploadedAssets = 2870;
@@ -52,9 +56,11 @@ export default function AdminDashboard() {
         />
       </div>
       <TrafficChart />
-      <AssetsCard totalAssets={totalAssets} uploadedAssets={uploadedAssets} />
+      <div className={styles.flexTwo}>
+        <UsageMap worldwide={worldwide} domestic={domestic} date={viewsDate} />
+        <AssetsCard totalAssets={totalAssets} uploadedAssets={uploadedAssets} />
+      </div>
       {/* 
-      <UsageMap />
       <PendingCard />
       <MostSearched />
       <MostDownloaded /> */}

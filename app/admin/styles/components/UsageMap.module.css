@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap");
+.adminDashboard {
+  padding: 2rem 3.2rem;
+  font-family: "Open Sans", sans-serif;
+  color: #3c3c3c;
+}
+
+.flexTwo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 45%;
+  height: 18rem;
+  padding: 0 1rem;
+  margin-top: 2rem;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.card .col1 {
+  width: 55%;
+}
+.card .col1 h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0;
+}
+.card .col2 {
+  letter-spacing: 0.72px;
+}
+.card .col2 .number {
+  font-weight: 300;
+  color: #009aac;
+  font-size: 1.6rem;
+  line-height: 0;
+  margin-top: 2.4rem;
+}
+.card .col2 .title {
+  font-size: 1rem;
+  line-height: 0;
+}
+.card .col2 .date {
+  letter-spacing: 0.21px;
+  opacity: 0.7;
+  font-size: 0.8rem;
+  line-height: 0;
+}
+.card .col2 .link a {
+  text-decoration: none;
+  color: #009aac;
+  letter-spacing: 0px;
+  font-weight: 600;
+}
+.card .col2 .link a span {
+  border-bottom: 2px solid;
+}/*# sourceMappingURL=UsageMap.module.css.map */

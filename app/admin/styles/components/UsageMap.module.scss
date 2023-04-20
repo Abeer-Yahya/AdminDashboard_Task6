@@ -1,0 +1,50 @@
+@import "../admin.module";
+.card {
+  @include FlexBox;
+  gap: 1rem;
+  width: 45%;
+  height: 18rem;
+  padding: 0 1rem;
+  margin-top: 2rem;
+  box-shadow: 0px 10px 20px #00000033;
+  border-radius: 5px;
+  .col1 {
+    width: 55%;
+    h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 0;
+    }
+  }
+  .col2 {
+    letter-spacing: 0.72px;
+    .number {
+      font-weight: 300;
+      color: #009aac;
+      font-size: 1.6rem;
+      line-height: 0;
+      margin-top: 2.4rem;
+    }
+    .title {
+      font-size: 1rem;
+      line-height: 0;
+    }
+    .date {
+      letter-spacing: 0.21px;
+      opacity: 0.7;
+      font-size: 0.8rem;
+      line-height: 0;
+    }
+    .link {
+      a {
+        text-decoration: none;
+        color: #009aac;
+        letter-spacing: 0px;
+        font-weight: 600;
+        span {
+          border-bottom: 2px solid;
+        }
+      }
+    }
+  }
+}
